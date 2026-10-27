@@ -29,7 +29,7 @@ let sbut=document.getElementById("btnShout")
 //
 //         Example: "hello" → "HELLO!"
 sbut.addEventListener("click",()=>{
-  document.getElementById("outShout").innerHTML=`${document.getElementById("shoutInput").value.toUpperCase()}!`
+  (document.getElementById("outShout")).innerHTML=`${((document.getElementById("shoutInput")).value).toUpperCase()}!`
 })
 
 // ============================================
@@ -49,14 +49,14 @@ let abut=document.getElementById("btnCalc")
 abut.addEventListener("click",()=>{
   let rag=document.getElementsByName("rg")
   let rgr=0
-  for(let i=0;i<rag.length;i++;){
+  for(let i=0;i<rag.length;i++){
     if(rag[i].checked){
       rgr=parseFloat(rag[i].value)
     }
   }
   let chb=document.getElementsByName("cb");
   let cbo=0;
-  for(let i=0;i<chb.length;i++;){
+  for(let i=0;i<chb.length;i++){
     if(chb[i].checked){
       cbo=cbo+0.5;
     }
@@ -111,7 +111,7 @@ clb.addEventListener("click", ()=>{
   document.getElementById("myInput").value="";
   document.getElementById("r3").checked=true
   let chb=document.getElementsByName("cb");
-  for(let i=0;i<chb.length;i++;){
+  for(let i=0;i<chb.length;i++){
     chb[i].checked=false;
   }
   document.getElementById("serviceSelect").value="dinein"
