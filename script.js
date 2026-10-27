@@ -48,14 +48,15 @@ sbut.addEventListener("click",()=>{
 let abut=document.getElementById("btnCalc")
 abut.addEventListener("click",()=>{
   let rag=document.getElementsByName("rg")
-  for(let i=0;i<rag.length();i++;){
+  let rgr=0
+  for(let i=0;i<rag.length;i++;){
     if(rag[i].checked){
-      let rgr=parseFloat(rag[i].value)
+      rgr=parseFloat(rag[i].value)
     }
   }
   let chb=document.getElementsByName("cb");
   let cbo=0;
-  for(let i=0;i<chb.length();i++;){
+  for(let i=0;i<chb.length;i++;){
     if(chb[i].checked){
       cbo=cbo+0.5;
     }
@@ -105,12 +106,12 @@ abut.addEventListener("click",()=>{
 //         c) Uncheck ALL topping checkboxes (loop through them)
 //         d) Set the service dropdown value to "dinein"
 //         e) Set the output paragraph innerHTML to ""
-let clb=document.getElementById("cleanBtn")
+let clb=document.getElementById("clearBtn")
 clb.addEventListener("click", ()=>{
   document.getElementById("myInput").value="";
   document.getElementById("r3").checked=true
   let chb=document.getElementsByName("cb");
-  for(let i=0;i<chb.length();i++;){
+  for(let i=0;i<chb.length;i++;){
     chb[i].checked=false;
   }
   document.getElementById("serviceSelect").value="dinein"
